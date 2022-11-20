@@ -1,3 +1,5 @@
+import heroImg from "./images/sweetgreen.jpg";
+
 // Header
 function createHeader() {
     const header = document.createElement("header");
@@ -32,7 +34,7 @@ function createMain() {
     const figure = document.createElement("figure");
     
     const saladBowlImg = document.createElement("img");
-    saladBowlImg.src = "../images/sweetgreen.jpg";
+    saladBowlImg.src = heroImg;
     saladBowlImg.alt = "salad in a bowl"
     
     
