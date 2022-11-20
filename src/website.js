@@ -3,16 +3,13 @@ import heroImg from "./images/sweetgreen.jpg";
 // Header
 function createHeader() {
     const header = document.createElement("header");
-
-    const brandDiv = document.createElement("div");
-    brandDiv.class = "brand";
     
     const restaurantName = document.createElement("h1");
+    restaurantName.classList.add("restaurant-name");
     restaurantName.textContent = 'Harvest-green';
     
     
-    header.appendChild(brandDiv);
-    brandDiv.appendChild(restaurantName);
+    header.appendChild(restaurantName);
 
     return header;
 }
@@ -34,8 +31,8 @@ function createMain() {
     const figure = document.createElement("figure");
     
     const saladBowlImg = document.createElement("img");
-    saladBowlImg.src = heroImg;
-    saladBowlImg.alt = "salad in a bowl"
+    // saladBowlImg.src = heroImg;
+    // saladBowlImg.alt = "salad in a bowl"
     
     
     main.appendChild(section);

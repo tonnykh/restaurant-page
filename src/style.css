@@ -1,3 +1,23 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --background-light: #B29A80;
+}
+
 body {
-    color: red;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    background-image: url(./images/sweetgreen.jpg);
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--background-light);
+}
+
+.restaurant-name {
+    font-size: 3rem;
+    line-height: 1.7;
 }
