@@ -1,1 +1,3 @@
-// alert('Tonny World ');
+import initializeWebsite from "./website";
+
+initializeWebsite();
