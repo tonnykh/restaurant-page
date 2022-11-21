@@ -3,21 +3,73 @@
 }
 
 :root {
+    --font-color-light: #E6FF55;
+    --font-color-dark: #00473B;
+
     --background-light: #B29A80;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'PT Sans Caption', sans-serif;
     text-align: center;
-    background-image: url(./images/sweetgreen.jpg);
-    height: 100vh;
+    background-color: var(--background-light);
+    color: var(--font-color-dark);
+    
+}
+
+
+/* HEADER */
+.restaurant-name {
+    font-size: 4rem;
+    line-height: 1.7;
+}
+
+
+/* MAIN */
+main {
+    background-image: linear-gradient(rgba(198, 172, 133, 0.401), rgba(25, 31, 3, 0.689)), url(./images/sweetgreen.jpg);
+    height: 80vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: var(--background-light);
 }
 
-.restaurant-name {
-    font-size: 3rem;
-    line-height: 1.7;
+.hero-text {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%);  
+    color: var(--font-color-light);
+}
+
+.heading {
+    line-height: 1.5;
+    font-size: 2.8rem;
+}
+
+.copy {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 11px;
+    width: 100%; 
+    gap: 8px;
+    font-size: 1.2rem;
+}
+
+a {
+    color: inherit;
+
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.4);
+    transition: transform 0.3s ease-in-out;
 }

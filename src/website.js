@@ -20,17 +20,19 @@ function createMain() {
     const main = document.createElement("main");
 
     const section = document.createElement("section");
-    section.id = "hero-text";
+    section.classList.add("hero-text");
     
     const heading = document.createElement("h2");
+    heading.classList.add("heading");
     heading.textContent = 'Real. Good. Food.';
     
     const copy = document.createElement("p");
+    copy.classList.add("copy");
     copy.textContent = 'Building healthier communities by connecting with real food';
     
-    const figure = document.createElement("figure");
+    // const figure = document.createElement("figure");
     
-    const saladBowlImg = document.createElement("img");
+    // const saladBowlImg = document.createElement("img");
     // saladBowlImg.src = heroImg;
     // saladBowlImg.alt = "salad in a bowl"
     
@@ -38,8 +40,8 @@ function createMain() {
     main.appendChild(section);
     section.appendChild(heading);
     section.appendChild(copy);
-    section.appendChild(figure);
-    figure.appendChild(saladBowlImg);
+    // section.appendChild(figure);
+    // figure.appendChild(saladBowlImg);
     
     return main;
 }
