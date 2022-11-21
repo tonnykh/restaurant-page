@@ -9,6 +9,8 @@
     --font-color-nav-light: #00473b9a;
 
     --background-light: #B29A80;
+
+    --font-color-menu: black;
 }
 
 body {
@@ -16,9 +18,22 @@ body {
     text-align: center;
     background-color: var(--background-light);
     color: var(--font-color-dark);
+
+
+    background-image: linear-gradient(#b29a80c1, rgba(146, 146, 105, 0.802)), url(./images/sweetgreen.jpg);
+    /* height: 73vh; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     
 }
 
+h2 {
+    font-weight: 100;
+    font-size: 1.4rem;
+
+}
 
 /* HEADER */
 .restaurant-name {
@@ -35,7 +50,7 @@ nav {
 .nav-btn {
     font-size: 1.5rem;
     border-style: none;
-    background-color: var(--background-light);
+    background-color: transparent;
     padding: 15px;
     transition: transform 0.3s;
     color: var(--font-color-nav-light);
@@ -57,23 +72,25 @@ nav {
 
 /* MAIN */
 main {
-    background-image: linear-gradient(rgba(198, 172, 133, 0.401), rgba(25, 31, 3, 0.689)), url(./images/sweetgreen.jpg);
+    /* background-image: linear-gradient(rgba(198, 172, 133, 0.401), rgba(25, 31, 3, 0.689)), url(./images/sweetgreen.jpg);
     height: 73vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed; */
+
 }
 
 .hero-text {
     position: absolute;
-    top: 46%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%);  
     color: var(--font-color-light);
 }
 
 .heading {
-    line-height: 1.5;
+    line-height: 2;
     font-size: 2.8rem;
 }
 
@@ -86,12 +103,14 @@ main {
 /* FOOTER */
 footer {
     display: flex;
+    align-items: center;
     justify-content: center;
-    position: fixed;
-    bottom: 11px;
+    position: absolute;
+    bottom: 8px;
     width: 100%; 
     gap: 8px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    padding: 10px;
 }
 
 a {
@@ -102,4 +121,40 @@ a {
 .fa-github:hover {
     transform: rotate(360deg) scale(1.4);
     transition: transform 0.3s ease-in-out;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+/* Menu Page */
+.menu {
+    color: var(--font-color-menu);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    padding: 20px 300px;
+    gap: 40px;
+}
+
+.menu-item {
+    background-color: var(--background-light);
+    height: 390px;
+    padding: 50px;
+    border-radius: 20px;
+    background:#e8dbc5c6  /*  10% opaque green */ 
+}
+
+.menu-item img {
+    width: 65%;
+    height: 53%;
+    border-radius: 20px;
+}
+
+.food-name {
+    padding: 10px;
 }

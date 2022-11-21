@@ -21,6 +21,7 @@ function createHome() {
 
 function loadHome() {
     const main = document.querySelector("main");
+    main.textContent = "";
     main.appendChild(createHome());
 }
 

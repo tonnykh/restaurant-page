@@ -1,4 +1,5 @@
 import loadHome from "./home";
+import loadMenu from "./menu";
 // import heroImg from "./images/sweetgreen.jpg";
 
 // Header
@@ -25,6 +26,9 @@ function createNav() {
     homeBtn.textContent = "Home";
     
     homeBtn.addEventListener('click', () => {
+
+        document.querySelector("footer").style.position = "absolute";
+
         if (!homeBtn.classList.contains("active")) {
             removeActive();
             homeBtn.classList.add("active");
@@ -37,9 +41,13 @@ function createNav() {
     menuBtn.textContent = "Menu";
 
     menuBtn.addEventListener('click', () => {
+
+        document.querySelector("footer").style.position = "static";
+
         if (!menuBtn.classList.contains("active")) {
             removeActive();
             menuBtn.classList.add("active");
+            loadMenu();
         }
     });
 
@@ -48,6 +56,9 @@ function createNav() {
     contactBtn.textContent = "Contact";
 
     contactBtn.addEventListener('click', () => {
+
+        document.querySelector("footer").style.position = "absolute";
+
         if (!contactBtn.classList.contains("active")) {
             removeActive();
             contactBtn.classList.add('active');        
@@ -136,7 +147,7 @@ function initializeWebsite() {
     content.appendChild(createMain());
     content.appendChild(createFooter());
 
-    loadHome();
+    loadMenu();
 }
 
 export default initializeWebsite;
