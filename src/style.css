@@ -6,6 +6,8 @@
     --font-color-light: #E6FF55;
     --font-color-dark: #00473B;
 
+    --font-color-nav-light: #00473b9a;
+
     --background-light: #B29A80;
 }
 
@@ -36,20 +38,21 @@ nav {
     background-color: var(--background-light);
     padding: 15px;
     transition: transform 0.3s;
-    color: var(--font-color-dark);
+    color: var(--font-color-nav-light);
     font-weight: 500;
 }
 
 .nav-btn:hover {
     position: relative;
     transform: translateY(-10%);
-
+    color: var(--font-color-dark);
 }
 
 .active {
     /* color: red; */
     text-decoration: underline;
     text-underline-offset: 9px;
+    color: var(--font-color-dark);
 }
 
 /* MAIN */

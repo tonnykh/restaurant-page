@@ -1,4 +1,5 @@
-import heroImg from "./images/sweetgreen.jpg";
+import loadHome from "./home";
+// import heroImg from "./images/sweetgreen.jpg";
 
 // Header
 function createHeader() {
@@ -27,6 +28,7 @@ function createNav() {
         if (!homeBtn.classList.contains("active")) {
             removeActive();
             homeBtn.classList.add("active");
+            loadHome();
         }
     })
 
@@ -73,16 +75,16 @@ function removeActive() {
 function createMain() {
     const main = document.createElement("main");
 
-    const section = document.createElement("section");
-    section.classList.add("hero-text");
+    // const section = document.createElement("section");
+    // section.classList.add("hero-text");
     
-    const heading = document.createElement("h2");
-    heading.classList.add("heading");
-    heading.textContent = 'Real. Good. Food.';
+    // const heading = document.createElement("h2");
+    // heading.classList.add("heading");
+    // heading.textContent = 'Real. Good. Food.';
     
-    const copy = document.createElement("p");
-    copy.classList.add("copy");
-    copy.textContent = 'Building healthier communities by connecting with real food';
+    // const copy = document.createElement("p");
+    // copy.classList.add("copy");
+    // copy.textContent = 'Building healthier communities by connecting with real food';
     
     // const figure = document.createElement("figure");
     
@@ -91,9 +93,10 @@ function createMain() {
     // saladBowlImg.alt = "salad in a bowl"
     
     
-    main.appendChild(section);
-    section.appendChild(heading);
-    section.appendChild(copy);
+    // main.appendChild(section);
+    // section.appendChild(heading);
+    // section.appendChild(copy);
+    
     // section.appendChild(figure);
     // figure.appendChild(saladBowlImg);
     
@@ -132,6 +135,8 @@ function initializeWebsite() {
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter());
+
+    loadHome();
 }
 
 export default initializeWebsite;
