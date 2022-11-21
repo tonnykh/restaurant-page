@@ -24,11 +24,38 @@ body {
     line-height: 1.7;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-btn {
+    font-size: 1.5rem;
+    border-style: none;
+    background-color: var(--background-light);
+    padding: 15px;
+    transition: transform 0.3s;
+    color: var(--font-color-dark);
+    font-weight: 500;
+}
+
+.nav-btn:hover {
+    position: relative;
+    transform: translateY(-10%);
+
+}
+
+.active {
+    /* color: red; */
+    text-decoration: underline;
+    text-underline-offset: 9px;
+}
 
 /* MAIN */
 main {
     background-image: linear-gradient(rgba(198, 172, 133, 0.401), rgba(25, 31, 3, 0.689)), url(./images/sweetgreen.jpg);
-    height: 80vh;
+    height: 73vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

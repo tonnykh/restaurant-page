@@ -10,8 +10,62 @@ function createHeader() {
     
     
     header.appendChild(restaurantName);
+    header.appendChild(createNav());
 
     return header;
+}
+
+function createNav() {
+    const nav = document.createElement("nav");
+
+    const homeBtn = document.createElement("button");
+    homeBtn.classList.add("nav-btn");
+    homeBtn.classList.add("active");
+    homeBtn.textContent = "Home";
+    
+    homeBtn.addEventListener('click', () => {
+        if (!homeBtn.classList.contains("active")) {
+            removeActive();
+            homeBtn.classList.add("active");
+        }
+    })
+
+    const menuBtn = document.createElement("button");
+    menuBtn.classList.add("nav-btn");
+    menuBtn.textContent = "Menu";
+
+    menuBtn.addEventListener('click', () => {
+        if (!menuBtn.classList.contains("active")) {
+            removeActive();
+            menuBtn.classList.add("active");
+        }
+    });
+
+    const contactBtn = document.createElement("button");
+    contactBtn.classList.add("nav-btn");
+    contactBtn.textContent = "Contact";
+
+    contactBtn.addEventListener('click', () => {
+        if (!contactBtn.classList.contains("active")) {
+            removeActive();
+            contactBtn.classList.add('active');        
+        }  
+    });
+
+    nav.appendChild(homeBtn);
+    nav.appendChild(menuBtn);
+    nav.appendChild(contactBtn);
+
+    return nav;
+}
+
+function removeActive() {
+    const btns = document.querySelectorAll(".nav-btn");
+    btns.forEach((btn) => {
+        if (btn.classList.contains("active")) {
+            btn.classList.remove("active");
+        }
+    })  
 }
 
 
@@ -73,6 +127,7 @@ function createFooter() {
 //Initialize website
 function initializeWebsite() {
     const content = document.querySelector("#content");
+
 
     content.appendChild(createHeader());
     content.appendChild(createMain());
