@@ -8,10 +8,6 @@ function importAll(r) {
     return images;
 }
 
-console.log(images);
-  
-
-
 function createMenu() {
     const menu = document.createElement("section");
     menu.classList.add("menu");
@@ -46,7 +42,6 @@ function createMenu() {
         "Blackened chicken, curry roasted cauliflower (x2), shredded cabbage, cilantro, raisins, warm quinoa, arugula, sweetgreen hot sauce, peppercorn tahina dressing"
     ))
 
-
     // Salads
     menu.appendChild(createMenuItem(
         "CHICKEN + BRUSSELS",
@@ -67,7 +62,7 @@ function createMenu() {
 }
 
 function createMenuItem(name, description) {
-   
+    
     let nameNew = ((name.replace(/[^\w]/g, "")).toLowerCase());
 
     const menuItem = document.createElement("article");
@@ -89,10 +84,8 @@ function createMenuItem(name, description) {
     menuItem.appendChild(foodDescription);
 
     return menuItem;
+
 }
-
-
-
 
 function loadMenu() {
     const main = document.querySelector("main");

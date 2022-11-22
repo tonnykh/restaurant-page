@@ -7,10 +7,12 @@
     --font-color-dark: #00473B;
 
     --font-color-nav-light: #00473b9a;
+    --font-color-menu: black;
+    --font-color-contact: white;
 
     --background-light: #B29A80;
-
-    --font-color-menu: black;
+    --background-light-transparent: #e8dbc5c6;  
+    --background-dark: #00473B;
 }
 
 body {
@@ -18,15 +20,11 @@ body {
     text-align: center;
     background-color: var(--background-light);
     color: var(--font-color-dark);
-
-
     background-image: linear-gradient(#b29a80c1, rgba(146, 146, 105, 0.802)), url(./images/sweetgreen.jpg);
-    /* height: 73vh; */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    
 }
 
 h2 {
@@ -34,6 +32,7 @@ h2 {
     font-size: 1.4rem;
 
 }
+
 
 /* HEADER */
 .restaurant-name {
@@ -64,26 +63,16 @@ nav {
 }
 
 .active {
-    /* color: red; */
     text-decoration: underline;
     text-underline-offset: 9px;
     color: var(--font-color-dark);
 }
 
-/* MAIN */
-main {
-    /* background-image: linear-gradient(rgba(198, 172, 133, 0.401), rgba(25, 31, 3, 0.689)), url(./images/sweetgreen.jpg);
-    height: 73vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; */
 
-}
-
+/* Home Page */
 .hero-text {
     position: absolute;
-    top: 42%;
+    top: 39%;
     left: 50%;
     transform: translate(-50%);  
     color: var(--font-color-light);
@@ -92,11 +81,73 @@ main {
 .heading {
     line-height: 2;
     font-size: 2.8rem;
+    letter-spacing: 2.5px;
+    word-spacing: 4px;
 }
 
-.copy {
+.copy-big {
     font-size: 1.5rem;
     font-weight: bold;
+    letter-spacing: 1.5px;
+    word-spacing: 4px;
+}
+
+.copy-small {
+    letter-spacing: 2px;
+    line-height: 4;
+    word-spacing: 4px;
+}
+
+
+/* Menu Page */
+.menu {
+    color: var(--font-color-menu);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    padding: 20px 300px;
+    gap: 40px;
+}
+
+.menu-item {
+    height: 390px;
+    padding: 50px;
+    border-radius: 20px;
+    background: var(--background-light-transparent);  
+}
+
+.menu-item img {
+    width: 65%;
+    height: 53%;
+    border-radius: 20px;
+}
+
+.food-name {
+    padding: 10px;
+}
+
+
+/* Contact Page */
+.contact {
+    background-color: var(--background-dark);
+    color: var(--font-color-contact);
+    margin:  30px 370px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.restaurant-location-img {
+    width: 600px;
+    height: 360px;
+    border-radius: 10px;
+}
+
+.phone-number:hover {
+    color: var(--font-color-light);
 }
 
 
@@ -126,35 +177,4 @@ a {
 img {
     width: 20px;
     height: 20px;
-}
-
-
-
-
-/* Menu Page */
-.menu {
-    color: var(--font-color-menu);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    padding: 20px 300px;
-    gap: 40px;
-}
-
-.menu-item {
-    background-color: var(--background-light);
-    height: 390px;
-    padding: 50px;
-    border-radius: 20px;
-    background:#e8dbc5c6  /*  10% opaque green */ 
-}
-
-.menu-item img {
-    width: 65%;
-    height: 53%;
-    border-radius: 20px;
-}
-
-.food-name {
-    padding: 10px;
 }

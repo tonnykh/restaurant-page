@@ -1,6 +1,6 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
-// import heroImg from "./images/sweetgreen.jpg";
+import loadContact from "./contact";
 
 // Header
 function createHeader() {
@@ -61,7 +61,8 @@ function createNav() {
 
         if (!contactBtn.classList.contains("active")) {
             removeActive();
-            contactBtn.classList.add('active');        
+            contactBtn.classList.add('active');    
+            loadContact();    
         }  
     });
 
@@ -81,39 +82,11 @@ function removeActive() {
     })  
 }
 
-
 // Main
 function createMain() {
     const main = document.createElement("main");
-
-    // const section = document.createElement("section");
-    // section.classList.add("hero-text");
-    
-    // const heading = document.createElement("h2");
-    // heading.classList.add("heading");
-    // heading.textContent = 'Real. Good. Food.';
-    
-    // const copy = document.createElement("p");
-    // copy.classList.add("copy");
-    // copy.textContent = 'Building healthier communities by connecting with real food';
-    
-    // const figure = document.createElement("figure");
-    
-    // const saladBowlImg = document.createElement("img");
-    // saladBowlImg.src = heroImg;
-    // saladBowlImg.alt = "salad in a bowl"
-    
-    
-    // main.appendChild(section);
-    // section.appendChild(heading);
-    // section.appendChild(copy);
-    
-    // section.appendChild(figure);
-    // figure.appendChild(saladBowlImg);
-    
     return main;
 }
-
 
 // Footer
 function createFooter() {
@@ -142,12 +115,11 @@ function createFooter() {
 function initializeWebsite() {
     const content = document.querySelector("#content");
 
-
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter());
 
-    loadMenu();
+    loadHome();
 }
 
 export default initializeWebsite;

@@ -1,4 +1,3 @@
-
 function createHome() {
 
     const home = document.createElement("section");
@@ -8,12 +7,17 @@ function createHome() {
     heading.classList.add("heading");
     heading.textContent = 'Real. Good. Food.';
     
-    const copy = document.createElement("p");
-    copy.classList.add("copy");
-    copy.textContent = 'Building healthier communities by connecting with real food';
+    const copyBig = document.createElement("p");
+    copyBig.classList.add("copy-big");
+    copyBig.textContent = 'Building healthier communities by connecting with real food';
+
+    const copySmall = document.createElement("p");
+    copySmall.classList.add("copy-small");
+    copySmall.textContent = '* 100% ORGANIC CERTIFIED';
 
     home.appendChild(heading);
-    home.appendChild(copy);
+    home.appendChild(copyBig);
+    home.appendChild(copySmall);
 
     return home;
 
